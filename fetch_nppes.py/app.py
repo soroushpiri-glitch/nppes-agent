@@ -139,3 +139,18 @@ def nppes_results_to_dataframe(all_results):
 
     df = pd.DataFrame(records)
     return df
+
+if __name__ == "__main__":
+    all_results = fetch_nppes_data(
+        state="MD",
+        city="BALTIMORE",
+        limit=200
+    )
+
+    df = nppes_results_to_dataframe(all_results)
+
+    print(df.shape)
+    print(df.head())
+
+    df.to_csv("nppes_api_records.csv", index=False)
+    print("Saved to nppes_api_records.csv")
