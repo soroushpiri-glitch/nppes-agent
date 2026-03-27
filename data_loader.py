@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def load_data():
-    df = pd.read_csv("nppes_api_1050_records.csv")
+    df = pd.read_csv("nppes_api_records.csv")  # updated name
 
     text_cols = [
         "Entity_Type", "First_Name", "Middle_Name", "Last_Name", "Credential",
